@@ -20,6 +20,7 @@ typedef NS_ENUM(NSUInteger, EventType) {
 @property (nonatomic, strong) NSString *username;
 @property (nonatomic, strong) NSString *repoName;
 @property (nonatomic, strong) NSDate *createdAt;
+@property (nonatomic, strong) NSString *avatarImageURLString;
 
 + (Event *)eventWithJSON:(NSDictionary *)jsonDictionary;
 

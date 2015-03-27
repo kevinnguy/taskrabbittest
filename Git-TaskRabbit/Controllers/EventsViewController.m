@@ -5,6 +5,7 @@
 #import "Event.h"
 
 #import <AFNetworking.h>
+#import <UIImageView+AFNetworking.h>
 #import <NSString+Octicons.h>
 
 @interface EventsViewController ()
@@ -20,7 +21,7 @@
     self.dateFormatter = [NSDateFormatter new];
     [self.dateFormatter setDateFormat:@"MMM d, yyyy"]; //Jan 1, 2015
 
-    [self setupTableView];
+    [self setupCollectionView];
     [self setupDataSource];
 }
 
@@ -43,7 +44,7 @@
     }];
 }
 
-- (void)setupTableView
+- (void)setupCollectionView
 {
     UINib *nib = [UINib nibWithNibName:@"EventCollectionViewCell" bundle:nil];
     [self.collectionView registerNib:nib forCellWithReuseIdentifier:@"EventCollectionViewCell"];
@@ -73,7 +74,7 @@
     cell.repoNameLabel.text = event.repoName;
     cell.dateLabel.text = [self.dateFormatter stringFromDate:event.createdAt];
     cell.userNameLabel.text = event.username;
-    cell.userAvatarImageView.image = nil;
+    [cell.userAvatarImageView setImageWithURL:[NSURL URLWithString:event.avatarImageURLString]];
     
     return cell;
 }
@@ -85,7 +86,9 @@
 #pragma mark - UICollectionViewDelegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    [self.navigationController pushViewController:[RepoDetailViewController new] animated:YES];
+    RepoDetailViewController *destinationViewController = [RepoDetailViewController new];
+    destinationViewController.event = self.eventDataSource[indexPath.row];
+    [self.navigationController pushViewController:destinationViewController animated:YES];
 }
 
 @end

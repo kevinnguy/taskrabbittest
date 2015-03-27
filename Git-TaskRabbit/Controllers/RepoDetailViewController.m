@@ -6,6 +6,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setupDataSource];
+    [self setupCollectionView];
+}
+
+- (void)setupDataSource
+{
+    
+}
+
+- (void)setupCollectionView
+{
     UINib *nib = [UINib nibWithNibName:@"UserCollectionViewCell" bundle:nil];
     [self.collectionView registerNib:nib forCellWithReuseIdentifier:@"UserCollectionViewCell"];
 }

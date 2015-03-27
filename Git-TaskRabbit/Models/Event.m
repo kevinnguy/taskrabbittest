@@ -29,6 +29,7 @@
     event.username = jsonDictionary[@"actor"][@"login"];
     event.repoName = jsonDictionary[@"repo"][@"name"];
     event.repoName = [event.repoName stringByReplacingOccurrencesOfString:@"taskrabbit/" withString:@""];
+    event.avatarImageURLString = jsonDictionary[@"actor"][@"avatar_url"];
     
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
     [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'Z'"]; // 2015-03-25T14:12:11Z
