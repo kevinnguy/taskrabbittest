@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A16520E1AC604470060E5A4 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A16520D1AC604470060E5A4 /* Event.m */; };
 		5AA885661A81AFDA002CE5F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA885651A81AFDA002CE5F4 /* main.m */; };
 		5AA885691A81AFDA002CE5F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA885681A81AFDA002CE5F4 /* AppDelegate.m */; };
 		5AA885861A81AFDA002CE5F4 /* Git_TaskRabbitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA885851A81AFDA002CE5F4 /* Git_TaskRabbitTests.m */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A16520C1AC604470060E5A4 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		0A16520D1AC604470060E5A4 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		5AA885601A81AFDA002CE5F4 /* Git-TaskRabbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Git-TaskRabbit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AA885641A81AFDA002CE5F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AA885651A81AFDA002CE5F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				5AA885971A81B613002CE5F4 /* Git_TaskRabbit.xcdatamodeld */,
+				0A16520C1AC604470060E5A4 /* Event.h */,
+				0A16520D1AC604470060E5A4 /* Event.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -348,6 +353,7 @@
 				5AC343DC1A81FACA00DFB581 /* UserCollectionViewCell.m in Sources */,
 				5AA885A11A81B613002CE5F4 /* EventsViewController.m in Sources */,
 				5AA885691A81AFDA002CE5F4 /* AppDelegate.m in Sources */,
+				0A16520E1AC604470060E5A4 /* Event.m in Sources */,
 				5AA885661A81AFDA002CE5F4 /* main.m in Sources */,
 				5AA885A81A81B72A002CE5F4 /* RepoDetailViewController.m in Sources */,
 				5AA885A21A81B613002CE5F4 /* Git_TaskRabbit.xcdatamodeld in Sources */,
