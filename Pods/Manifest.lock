@@ -23,13 +23,16 @@ PODS:
   - MagicalRecord (2.2):
     - MagicalRecord/Core (= 2.2)
   - MagicalRecord/Core (2.2)
+  - OcticonsIOS (0.0.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5.1)
   - MagicalRecord (~> 2.2)
+  - OcticonsIOS (~> 0.0.2)
 
 SPEC CHECKSUMS:
   AFNetworking: fefbce9660acb17f48ae0011292d4da0f457bf36
   MagicalRecord: 2b471584fc9e3137f3d0a56967917baa4979e224
+  OcticonsIOS: d478db5269c13963befe0a304eada7a282ab4007
 
 COCOAPODS: 0.36.0

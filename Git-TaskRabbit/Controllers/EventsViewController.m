@@ -5,6 +5,7 @@
 #import "Event.h"
 
 #import <AFNetworking.h>
+#import <NSString+Octicons.h>
 
 @interface EventsViewController ()
 @property (nonatomic, strong) NSMutableArray *eventDataSource;
@@ -63,10 +64,10 @@
     
     cell.actionTakenLabel.text = @"Unknown"; // Default
     if (event.type == EventForkType) {
-        cell.actionTakenLabel.text = @"Fork";
+        cell.actionTakenLabel.text = [NSString octicon_iconStringForEnum:OCTIconRepoForked];
     }
     else if (event.type == EventWatchType) {
-        cell.actionTakenLabel.text = @"Watch";
+        cell.actionTakenLabel.text = [NSString octicon_iconStringForEnum:OCTIconStar];
     }
     
     cell.repoNameLabel.text = event.repoName;
